@@ -1,4 +1,5 @@
-import { User, GraduationCap, Award, Mail, Linkedin } from 'lucide-react';
+import Image from 'next/image';
+import { GraduationCap, Award, Mail, Linkedin } from 'lucide-react';
 
 export default function Equipe() {
   const teamMembers = [
@@ -19,7 +20,7 @@ export default function Equipe() {
         'Autor de artigos especializados'
       ],
       description: 'Advogado especialista em direito empresarial e tributário com vasta experiência em planejamento tributário, fusões e aquisições, e consultoria empresarial.',
-      image: '/team/joao-silva.jpg',
+      image: '/team/joao-silva.webp',
       email: 'joao.silva@silvaassociados.com.br',
       linkedin: '#'
     },
@@ -40,7 +41,7 @@ export default function Equipe() {
         'Mediadora certificada pelo CNJ'
       ],
       description: 'Advogada especializada em direito trabalhista e civil, com foco em prevenção de conflitos e consultoria preventiva para empresas.',
-      image: '/team/maria-associada.jpg',
+      image: '/team/maria-associada.webp',
       email: 'maria.associada@silvaassociados.com.br',
       linkedin: '#'
     },
@@ -61,7 +62,7 @@ export default function Equipe() {
         'Atuação em Tribunais Superiores'
       ],
       description: 'Advogado criminalista com sólida experiência em defesas criminais, inquéritos policiais e recursos em tribunais superiores.',
-      image: '/team/carlos-pereira.jpg',
+      image: '/team/carlos-pereira.webp',
       email: 'carlos.pereira@silvaassociados.com.br',
       linkedin: '#'
     },
@@ -82,7 +83,7 @@ export default function Equipe() {
         'Consultora em Planejamento Sucessório'
       ],
       description: 'Advogada especializada em direito de família e sucessões, com experiência em divórcios, guarda de menores e planejamento sucessório.',
-      image: '/team/ana-santos.jpg',
+      image: '/team/ana-santos.webp',
       email: 'ana.santos@silvaassociados.com.br',
       linkedin: '#'
     }
@@ -114,11 +115,18 @@ export default function Equipe() {
               {/* Photo */}
               <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <div className="relative">
-                  <div className="aspect-[4/5] bg-primary-100 rounded-2xl overflow-hidden">
-                    {/* Placeholder for member photo */}
-                    <div className="w-full h-full bg-gradient-to-br from-primary-200 to-primary-300 flex items-center justify-center">
-                      <User className="h-32 w-32 text-primary-400" />
-                    </div>
+                  <div className="aspect-[4/5] bg-primary-100 rounded-2xl overflow-hidden relative">
+                    <Image
+                      src={member.image}
+                      alt={`Foto de ${member.name}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+                      quality={95}
+                      priority={index < 2}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                    />
                   </div>
                   <div className="absolute -bottom-6 -right-6 bg-gold-100 p-4 rounded-xl shadow-lg">
                     <GraduationCap className="h-8 w-8 text-gold-600" />
