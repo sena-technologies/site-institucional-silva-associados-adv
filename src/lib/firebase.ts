@@ -1,5 +1,5 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { initializeApp, FirebaseApp } from 'firebase/app';
+import { getFirestore, Firestore } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -10,10 +10,25 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Check if Firebase configuration is properly set
+const isFirebaseConfigured = () => {
+  return firebaseConfig.apiKey && 
+         firebaseConfig.authDomain && 
+         firebaseConfig.projectId &&
+         firebaseConfig.apiKey !== 'your_api_key_here' &&
+         firebaseConfig.projectId !== 'your_project_id';
+};
 
-// Initialize Firestore
-export const db = getFirestore(app);
+// Initialize Firebase only if properly configured
+let app: FirebaseApp | null = null;
+let db: Firestore | null = null;
 
+if (isFirebaseConfigured()) {
+  app = initializeApp(firebaseConfig);
+  db = getFirestore(app);
+} else {
+  console.warn('Firebase não está configurado. Configure as variáveis de ambiente no arquivo .env.local');
+}
+
+export { db };
 export default app;

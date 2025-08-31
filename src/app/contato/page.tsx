@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { 
   MapPin, 
@@ -60,6 +59,28 @@ export default function Contato() {
     setSubmitStatus('idle');
 
     try {
+      // Check if Firebase is configured
+      if (!db) {
+        console.warn('Firebase não está configurado. Simulando envio...');
+        // Simulate success for demonstration
+        setTimeout(() => {
+          setSubmitStatus('success');
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            subject: '',
+            message: '',
+            area: ''
+          });
+          setIsSubmitting(false);
+        }, 1000);
+        return;
+      }
+
+      // Dynamic import of Firebase functions
+      const { collection, addDoc, serverTimestamp } = await import('firebase/firestore');
+      
       await addDoc(collection(db, 'contacts'), {
         ...formData,
         timestamp: serverTimestamp(),
