@@ -71,14 +71,14 @@ const Footer = () => {
               <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-gold-400" />
                 <span className="text-primary-300 text-sm">
-                  Rua das Flores, 123<br />
-                  Centro, São Paulo - SP<br />
-                  01234-567
+                  Rua Quinze de Novembro, 850<br />
+                  Centro, Florianópolis - SC<br />
+                  88010-400
                 </span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-gold-400" />
-                <span className="text-primary-300 text-sm">(11) 3456-7890</span>
+                <span className="text-primary-300 text-sm">(48) 3224-7890</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-gold-400" />

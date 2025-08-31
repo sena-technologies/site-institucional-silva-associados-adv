@@ -2,9 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-inter, system-ui, sans-serif);
+  line-height: 1.6;
+  color: #334155;
+  background-color: #ffffff;
+}
+
 /* Custom prose styles for blog content */
 .prose {
   color: #334155;
+  max-width: none;
 }
 
 .prose h2 {
@@ -47,10 +62,12 @@
 .prose a {
   color: #d97706;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .prose a:hover {
   color: #b45309;
+  text-decoration: underline;
 }
 
 /* Line clamp utility for text truncation */

@@ -111,9 +111,9 @@ export default function Contato() {
                   <div>
                     <h3 className="font-semibold mb-1">Endereço</h3>
                     <p className="text-primary-200">
-                      Rua das Flores, 123<br />
-                      Centro, São Paulo - SP<br />
-                      CEP: 01234-567
+                      Rua Quinze de Novembro, 850<br />
+                      Centro, Florianópolis - SC<br />
+                      CEP: 88010-400
                     </p>
                   </div>
                 </div>
@@ -123,8 +123,8 @@ export default function Contato() {
                   <div>
                     <h3 className="font-semibold mb-1">Telefone</h3>
                     <p className="text-primary-200">
-                      (11) 3456-7890<br />
-                      (11) 9 8765-4321
+                      (48) 3224-7890<br />
+                      (48) 9 8765-4321
                     </p>
                   </div>
                 </div>
@@ -158,7 +158,7 @@ export default function Contato() {
                   Para casos urgentes, entre em contato através do nosso WhatsApp:
                 </p>
                 <a
-                  href="https://wa.me/5511987654321"
+                  href="https://wa.me/5548987654321"
                   className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
                 >
                   <MessageSquare className="mr-2 h-4 w-4" />
@@ -337,7 +337,7 @@ export default function Contato() {
             <div className="bg-white rounded-lg p-12">
               <MapPin className="h-16 w-16 text-gold-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-primary-900 mb-2">
-                Estamos no Centro de São Paulo
+                Estamos no Centro de Florianópolis
               </h3>
               <p className="text-primary-600">
                 Localização privilegiada para melhor atendê-lo. 
