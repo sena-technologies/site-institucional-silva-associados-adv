@@ -89,8 +89,11 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-800 mt-8 pt-8 text-center">
-          <p className="text-primary-400 text-sm">
+          <p className="text-primary-400 text-sm mb-2">
             © 2025 Silva & Associados - Advocacia & Consultoria. Todos os direitos reservados.
+          </p>
+          <p className="text-primary-500 text-xs">
+            Desenvolvido por <a href="https://website-oficial-azure.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-gold-400 hover:text-gold-300 transition-colors font-medium">Sena Technologies</a>
           </p>
         </div>
       </div>

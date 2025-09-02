@@ -20,7 +20,7 @@ export default function Equipe() {
         'Autor de artigos especializados'
       ],
       description: 'Advogado especialista em direito empresarial e tributário com vasta experiência em planejamento tributário, fusões e aquisições, e consultoria empresarial.',
-      image: '/team/joao-silva.webp',
+      image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       email: 'joao.silva@silvaassociados.com.br',
       linkedin: '#'
     },
@@ -41,7 +41,7 @@ export default function Equipe() {
         'Mediadora certificada pelo CNJ'
       ],
       description: 'Advogada especializada em direito trabalhista e civil, com foco em prevenção de conflitos e consultoria preventiva para empresas.',
-      image: '/team/maria-associada.webp',
+      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       email: 'maria.associada@silvaassociados.com.br',
       linkedin: '#'
     },
@@ -62,7 +62,7 @@ export default function Equipe() {
         'Atuação em Tribunais Superiores'
       ],
       description: 'Advogado criminalista com sólida experiência em defesas criminais, inquéritos policiais e recursos em tribunais superiores.',
-      image: '/team/carlos-pereira.webp',
+      image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       email: 'carlos.pereira@silvaassociados.com.br',
       linkedin: '#'
     },
@@ -83,7 +83,7 @@ export default function Equipe() {
         'Consultora em Planejamento Sucessório'
       ],
       description: 'Advogada especializada em direito de família e sucessões, com experiência em divórcios, guarda de menores e planejamento sucessório.',
-      image: '/team/ana-santos.webp',
+      image: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       email: 'ana.santos@silvaassociados.com.br',
       linkedin: '#'
     }
@@ -115,17 +115,13 @@ export default function Equipe() {
               {/* Photo */}
               <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <div className="relative">
-                  <div className="aspect-[4/5] bg-primary-100 rounded-2xl overflow-hidden relative">
+                  <div className="aspect-[4/5] bg-primary-100 rounded-2xl overflow-hidden">
                     <Image
                       src={member.image}
                       alt={`Foto de ${member.name}`}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-                      quality={95}
-                      priority={index < 2}
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                   <div className="absolute -bottom-6 -right-6 bg-gold-100 p-4 rounded-xl shadow-lg">
